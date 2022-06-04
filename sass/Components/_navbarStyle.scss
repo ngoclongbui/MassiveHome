@@ -1,0 +1,25 @@
+.navbarDark {
+  background-color: $color-black-8;
+  transition: 0.5s;
+  .navbar {
+    .navbar-brand {
+      img {
+        height: 60px;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+// .navbarTransparent {
+//   background-color: $color-black-8;
+//   transition: 0.5s;
+//   .navbar {
+//     .navbar-brand {
+//       img {
+//         height: 96px;
+//         transition: 0.5s;
+//       }
+//     }
+//   }
+// }

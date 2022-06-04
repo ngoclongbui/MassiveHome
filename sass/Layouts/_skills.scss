@@ -1,0 +1,65 @@
+.skills {
+  background-image: url("../img/skills-01.jpg");
+  @include bgFixed;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $color-black-7;
+  }
+  .skills__content {
+    @include contentSize (80%);
+    z-index: 3;
+    .skills__left {
+      display: table;
+      vertical-align: middle;
+      width: 100%;
+      height: 400px;
+      padding: 0 $pd-2 + 3;
+      margin-right: $mg-3;
+      h3 {
+        position: relative;
+        z-index: 3;
+        text-transform: uppercase;
+        @include styleTextAll ($color-white-0,$fs-5,$fw-1,$lh-2, $ls-6);
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+    .skills__right {
+      position: relative;
+      z-index: 4;
+      color: $color-white-0;
+      padding: 0 $pd-5;
+      h5 {
+        font-size: $fs-3;
+        letter-spacing: $ls-2;
+        margin-bottom: $mg-5;
+      }
+      p {
+        font-size: 14px;
+        letter-spacing: $ls-1;
+        margin-bottom: $mg-5;
+      }
+      .skills__progress {
+        padding-top: $pd-3;
+      }
+    }
+  }
+  @media (max-width: 1299.98px) { 
+    .skills__content {
+      @include contentSize (100%);
+    }
+  }
+  @include responsive ("small") {
+    &::before {
+      display: none;
+    }
+  }
+}

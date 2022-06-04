@@ -1,0 +1,22 @@
+.backToTop {
+  position: fixed;
+  z-index: 9;
+  bottom: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  text-align: center;
+  @include styleTextFH ($color-white-0,$fs-1 - 1, 25px);
+  background-color: $color-black-6;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s;
+  &:hover {
+    color: $color-black-0;
+    background-color: $color-yellow-1;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}

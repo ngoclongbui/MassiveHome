@@ -1,0 +1,24 @@
+.index {
+  background-color: $color-black-4;
+  .index__content{
+    @include contentSize (85%);
+    .index__item {
+      text-align: center;
+      @include styleTextFS ($color-white-0, $fs-7, $ls-2);
+      i {
+        margin-right: $mg-1;
+      }
+      p {
+        margin-top: $mg-1;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        @include styleTextFS ($color-white-0, $fs-2, $ls-1);
+      }
+    }
+  }
+  @media (max-width: 1299.98px) { 
+    .index__content {
+      @include contentSize (100%);
+    }
+  }
+}

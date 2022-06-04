@@ -1,0 +1,45 @@
+.comments {
+  .comments__content {
+    @include contentSize (50%);
+    .comments__item{
+      text-align: center;
+      text-transform: uppercase;
+      img {
+        width: 100px;
+        border-radius: 50%;
+        margin: 0 auto $mg-3 ;
+      }
+      p {
+        @include styleTextFH ($color-gray-0, $fs-2 + 1, $lh-1);
+        font-style: italic;
+        margin-bottom: $mg-5;
+        text-transform: none;
+      }
+      h5 {
+        @include styleTextFS ($color-black-0, $fs-2 - 1, $ls-2);
+        margin: $mg-1 0 0;
+      }
+      span {
+        @include styleTextFS ($color-gray-9, $fs-1 - 1, $ls-2);
+      }
+    }
+  }
+
+  @include responsive ("medium") {
+    .comments__content {
+      @include contentSize (70%);
+    }
+  }
+
+  @include responsive ("small") {
+    .comments__content {
+      @include contentSize (80%);
+    }
+  }
+  
+  @include responsive ("extra-small") {
+    .comments__content {
+      @include contentSize (90%);
+    }
+  }
+}

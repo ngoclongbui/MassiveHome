@@ -1,0 +1,41 @@
+.intro {
+  background-image: url("../img/intro-bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  .intro__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .intro__text {
+      color: $color-white-0;
+      text-align: center;
+      text-transform: uppercase;
+      h1 {
+        font-size: $fs-8;
+        letter-spacing: $ls-5;
+        font-weight: $fw-0;
+      }
+      p {
+        font-size: $fs-4;
+        letter-spacing: $ls-6;
+      }
+    }
+  }
+  @include responsive ("small") {
+    .intro__content {
+      .intro__text {
+        h1 {
+          font-size: $fs-6;
+        }
+        p {
+          font-size: $fs-3;
+        }
+      }
+    }
+  }
+}

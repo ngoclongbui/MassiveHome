@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+  margin-bottom: $mg-6;
+  h3 {
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: $pd-1;
+    margin-bottom: $mg-3;
+    @include styleTextAll ($color-black-1, $fs-5, $fw-1, $lh-2, $ls-2);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: $color-black-2;
+    }
+  }
+  p {
+    width: 60%;
+    margin: 0 auto;
+    @include styleTextP ($lh-0, $ls-1);
+    color: $color-gray-0;
+  }
+  @media (max-width: 1299.98px) { 
+    p {
+      width: 85%;
+    }
+  }
+}

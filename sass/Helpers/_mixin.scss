@@ -1,0 +1,71 @@
+@mixin styleTextAll($color, $fs, $fw, $lh, $ls) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin styleTextF($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin styleTextFS($color, $fs, $ls) {
+  color: $color;
+  font-size: $fs;
+  letter-spacing: $ls;
+}
+
+@mixin styleTextFH($color, $fs, $lh) {
+  color: $color;
+  font-size: $fs;
+  line-height: $lh;
+}
+
+@mixin styleTextP($lh, $ls) {
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin styleButton($bg-color, $border, $pd-x, $bd-y) {
+  background-color: $bg-color;
+  border: 1px solid $border;
+  padding:$bd-y $pd-x;
+  cursor: pointer;
+}
+
+@mixin styleBtNonPointer($bg-color, $border, $pd-x, $bd-y) {
+  background-color: $bg-color;
+  border: 1px solid $border;
+  padding:$bd-y $pd-x;
+}
+
+@mixin styleBtNonBorder($bg-color, $pd-x, $bd-y) {
+  background-color: $bg-color;
+  padding:$bd-y $pd-x;
+}
+
+@mixin bgFixed {
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@mixin contentSize ($w) {
+  width: $w;
+  margin: 0 auto;
+}
+
+@mixin responsive($screen) {
+  @if map-has-key($map:$breakpoints , $key:$screen ){
+    $value: map-get($map: $breakpoints, $key: $screen);
+    @media screen and(max-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @warn "`{$screen}` isn't valid/exist in breakpoints";
+  }
+}

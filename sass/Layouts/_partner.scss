@@ -1,0 +1,23 @@
+.partner {
+  .partner__content{
+    @include contentSize (85%);
+  }
+  @include responsive ("large") {
+    .partner__content {
+      @include contentSize (70%);
+    }
+  }
+  @include responsive ("medium") {
+    .partner__content {
+      @include contentSize (80%);
+    }
+    &.section {
+      padding-top: 0;
+    }
+  }
+  @include responsive ("extra-small") {
+    .partner__content {
+      @include contentSize (50%);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.progress {
+  margin-top: $mg-1;
+  margin-bottom: $mg-6;
+  background-color: $color-gray-6;
+  border-radius: 0;
+  height: auto;
+  overflow: visible;
+  .progress-bar{
+    position: relative;
+    text-transform: uppercase;
+    @include styleTextP ($lh-3, $ls-1);
+    text-align: left;
+    padding: 0 $pd-1;
+    color: $color-black-0;
+    background-color: $color-white-0;
+    overflow: visible;
+    width: 0%;
+    transition: 0.5s;
+    span {
+      @include styleTextF ($color-black-0, $fs-1 - 3, $fw-1);
+      position: absolute;
+      top: 0;
+      right: -5px;
+      min-width: 25px;
+      height: 20px;
+      transform: translateY(-150%);
+      border-radius: 30px;
+      padding: 0 $pd-0 + 3;
+      background-color: $color-gray-7;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -11px;
+      right: 9px;
+      width: 5px;
+      height: 5px;
+      border: 5px solid transparent;
+      border-top-color: $color-gray-7 ;
+    }
+  }
+}
+
+// skills progress
+.progress--run {
+  .progress {
+    &:nth-child(1) .progress-bar{
+      width: 80%;
+    }
+    &:nth-child(2) .progress-bar{
+      width: 90%;
+    }
+    &:nth-child(3) .progress-bar{
+      width: 75%;
+    }
+  }
+}

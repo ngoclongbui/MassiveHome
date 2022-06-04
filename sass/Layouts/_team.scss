@@ -1,0 +1,90 @@
+.team {
+  .title {
+    p {
+      width: 65%;
+    }
+  }
+  .row .col-4{
+    padding-left: $pd-3;
+    padding-right: $pd-3;
+  }
+  .team__content{
+    width: 90%;
+    margin: 0 auto;
+    .card__items{
+      display: inline-block;
+      &:hover .card__link .card__text .card__top,
+      &:hover .card__link .card__text .card__bottom {
+      transform: translate(-50%, 0);
+      }
+    }
+    .team__name{
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+      width: 70%;
+      text-align: end;
+      text-transform: uppercase;
+      background-color: $color-black-5;
+      padding: $pd-1 $pd-2 + 5;
+      h5 {
+        @include styleTextAll ($color-white-0, $fs-1 + 1, $fw-1, $lh-2, $ls-2);
+        margin: 0;
+      }
+      p {
+        color: $color-white-4;
+        font-size: $fs-1;
+        letter-spacing: $ls-2;
+        margin: 0;
+      }
+    }
+    .card__top, .card__bottom{
+      position: absolute;
+      width: 100%;
+    }
+    .card__top {
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -150%);
+      padding: $pd-2 + 5;
+      h5 {
+        @include styleTextFS($color-black-0, $fs-2 - 1, $ls-4);
+        margin-bottom: $mg-4;
+        text-transform: uppercase;
+      }
+      p {
+        @include styleTextFH($color-gray-0, $fs-2 - 1, $lh-1);
+      }
+    }
+    .card__bottom {
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, 100px);
+      a {
+        color: $color-black-0;
+        margin: $mg-2;
+      }
+    }
+  }
+  .team__hiring{
+    width: 85%;
+    margin: $mg-10 auto 0;
+    padding: $pd-6;
+    h4{
+      @include styleTextAll ($color-black-1, $fs-3, $fw-1, $lh-2, $ls-1);
+      text-transform: uppercase;
+      span {
+        color: $color-yellow-1;
+      }
+    }
+    p {
+      color: $color-gray-0;
+      margin-top: $mg-1;
+    }
+  }
+  @media (max-width: 1299.98px) { 
+    .team__content, .team__hiring {
+      @include contentSize (100%);
+    }
+  }
+}

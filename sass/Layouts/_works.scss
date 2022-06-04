@@ -1,0 +1,114 @@
+.works{
+  background-image: url("../img/works-01.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  .works__content {
+    @include contentSize (90%);
+    .nav-tabs {
+      display: flex;
+      border: none;
+      .nav-item {
+        width: 190px;
+        padding-right: $mg-2;
+      }
+      .nav-link {
+        width: 100%;
+        background-color: $color-gray-5;
+        margin-right: $mg-3;
+        padding: $pd-8 $pd-9;
+        border: none;
+        &:hover, &.active {
+          background-color: $color-white-0;
+        }
+        
+      }
+    }
+    .tab-content{
+      padding: $pd-3 0;
+    }
+    .works__icon {
+      font-size: $fs-7;
+      color: $color-black-0;
+    }
+    .works__text {
+      text-transform: uppercase;
+      span {
+        @include styleTextFS ($color-gray-0, $fs-2 - 1, $ls-2)
+      }
+      h2 {
+        @include styleTextFS ($color-black-1, $fs-6, $ls-2)
+      }
+      p {
+        margin-top: $mg-6;
+        text-transform: none;
+        color: $color-black-3;
+      }
+    }
+  }
+  @media (max-width: 1299.98px) { 
+    .works__content {
+      @include contentSize (100%);
+    }
+  }
+  @include responsive ("large") {
+    .works__content {
+      .nav-tabs {
+        .nav-item {
+          width: 20%;
+          padding-right: $mg-2;
+        }
+      }
+      .works__icon {
+        font-size: $fs-6;
+      }
+    }
+  }
+
+  @include responsive ("medium") {
+    .works__content {
+      .nav-tabs {
+        .nav-item {
+          padding-right: $mg-1;
+          .nav-link {
+            padding: $pd-11 + 5 $pd-5 + 2;
+          }
+        }
+      }
+      .works__icon {
+        font-size: $fs-5;
+      }
+    }
+  }
+
+  @include responsive ("small") {
+    .works__content {
+      .nav-tabs {
+        .nav-item {
+          padding-right: $mg-1;
+          .nav-link {
+            padding: $pd-2 $pd-3;
+          }
+        }
+      }
+      .works__icon {
+        font-size: $fs-3;
+      }
+    }
+  }
+
+  @include responsive ("extra-small") {
+    .works__content {
+      .nav-tabs {
+        .nav-item {
+          padding-right: $mg-1;
+          .nav-link {
+            padding: $pd-1 $pd-11;
+          }
+        }
+      }
+      .works__icon {
+        font-size: $fs-2;
+      }
+    }
+  }
+}
